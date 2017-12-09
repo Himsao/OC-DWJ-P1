@@ -1,0 +1,841 @@
+/*---------------------------Les polices-----------------------------*/
+
+*{font-family: 'Arial';transition: 1s;}
+
+/*-----------------------------------------body---------------------------------------------------------*/
+
+body{ background-color: grey; }
+
+/*-----------------------------------------div .content-------------------------------------------------*/
+
+.content
+{	
+	max-width: 1600px;
+	margin:auto;
+	background-color: white;
+}
+
+/*---------------------------------------header----------------------------------------------------------*/
+
+/****************************en-tête de l'entête**********************/
+
+#header1
+{
+	
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-around;
+	padding:0;
+}
+
+#logo
+{
+	margin:25px;
+}
+
+.headnav
+{
+	
+	height: 100%;
+	padding:0;
+}
+#sliderremplacement{display: none;}
+.menuprinc
+{
+	
+	height: 100%;	
+	display: block; /*traiter les inside comme des block*/
+	display: flex;
+	flex-direction: row; /* pour pouvoir aligner les puces*/
+	padding:0;
+	margin:0;	
+}
+
+.liens{padding-top: 40px;}
+
+/********************************le slider****************************/
+
+
+div#slider
+{
+	position: relative;
+	min-width:100%;
+	max-width: 1600px;
+	overflow: hidden;
+	z-index:0;	
+}
+
+div#slider figure
+{
+	position: relative;
+	width: 1000%; /*taille cadre image en fonction du nombre d'immage*/
+	margin:0;
+	padding:0;
+	font-size: 0;
+	text-align: left;
+	animation: 60s slidy infinite;
+}
+
+div#slider figure img
+{
+	width: 10%; /*taille immage en fonction du nombre*/
+	height: auto;
+	float: left;
+}
+
+@keyframes slidy 
+{
+	0% { left: 0%; }
+	10% { left: -100%; }
+	20% { left: -200%; }
+	30% { left: -300%; }
+	40% { left: -400%; }
+	50% { left: -500%; }
+	60% { left: -600%; }
+	70% { left: -700%; }
+	80% { left: -800%; }
+	90% { left: -900%; }
+	100% { left: 0%; } 
+}
+
+/*----barre defilement animée */
+
+#scrollslide
+{
+	position: absolute;
+	z-index: 7;
+	bottom: 0;
+	display: flex;
+	height: 5px;
+	width: 200%;
+	animation: 60s scrollslide infinite;
+}
+
+#scrollone
+{
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: rgb(92, 173, 211);	
+}
+
+#scrolltwo
+{
+	display: block;
+	width: 100%;
+	height: 5px;
+	background-color: grey;
+	opacity: 0.2;	
+}
+
+@keyframes scrollslide 
+{
+	0% { left: -100%; }
+	10% { left: -90%; }
+	20% { left: -80%; }
+	30% { left: -70%; }
+	40% { left: -60%; }
+	50% { left: -50%; }
+	60% { left: -40%; }
+	70% { left: -30%; }
+	80% { left: -20%; }
+	90% { left: -10%; }
+	100% { left: 0%; } 
+}
+#contener_slider
+{
+	position: relative;
+}
+
+/*-------bouttons slider------*/
+
+div#slider:before /*boutton gauche*/
+{	
+	position: absolute;
+	font-family: 'fontawesome';
+	font-size:300%;
+	content: '\f104';
+	top:45%;
+	left: 0;
+	z-index: 40;
+	padding:1% 1% 1% 0.5%;
+	background-color: black;	
+	border-radius: 0 180px 180px 0;
+	opacity: 0.4;
+	color: white;
+}
+
+div#slider:before:hover
+{
+	background-color: white;
+}
+div#slider:after:hover
+{
+	background-color: white;
+}
+
+div#slider:after /*boutton droit*/
+{
+	position: absolute;
+	font-family: 'fontawesome';
+	font-size:300%;
+	content: '\f105';
+	top:45%;
+	right: 0;
+	z-index: 40;	
+	padding:1% 0.5% 1% 1%;
+	background-color: black ;	
+	border-radius: 180px 0px 0px 180px;
+	opacity: 0.4;
+	color: white;
+}
+
+
+/*------texte par dessus slider -----*/
+
+#onslider
+{
+	width: 30%;
+	max-width: 800px;
+	position:absolute;
+	z-index: 2;
+	margin-left: 7%;
+	margin-top:150px;
+}
+
+
+/*****************************pied de l'entête************************/
+
+#foothead
+{
+	height: 80px;
+	background-color: #F5F5F5;	
+	border-radius: 0 0 10px 10px;	
+}
+
+/*-------------------------------------Section 1 ------------------------------------------------------*/
+#principal1
+{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	margin-bottom: 100px;	
+}
+/************************Header de la section 1***************************/
+
+.services
+{
+	margin-bottom: 100px;
+}
+h2
+{margin-bottom:0px;}
+#paraserv
+{
+	padding-right:450px;
+	padding-left: 450px;
+	margin-bottom: 0px; 	
+}
+
+.titre
+{
+	width: 100%;
+}
+
+.descriptionprojet
+{
+	margin-bottom: 50px;
+}
+/************************Article 1 de la section 1***************************/
+.photomac
+{	
+	background-image:url('../img/main-feature.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 45%;
+}
+
+
+/************************Article 2 de la section 1***************************/
+#minires1,#minires2{display:none;}
+#maxires1,#maxires2{display: inline;}
+.uxdesign
+{
+	display: flex;
+	flex-direction: column;
+	width: 45%;
+	margin-right: 100px;
+	padding:0;	
+}
+/*---------Icones font awesome services------*/
+
+
+
+.floatleft  /*les images UXdesign UIdesign et SEO*/
+{
+	float: left;	
+	margin-top: 15px;		
+	border:2px solid #EEEEEE;
+	padding: 20px;
+	border-radius: 100% ;
+	color: rgb(92, 173, 211);
+	position: relative;	
+	margin-top: 5%;
+}
+
+.floatleft:after
+{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border:6px solid rgb(92, 173, 211);
+	border-radius: 100%;
+	top:42%;
+	right: -7%;
+}
+/*---------Icones font awesome services------*/
+
+.floatleft  /*les images UXdesign UIdesign et SEO*/
+{
+	float: left;	
+	margin-top: 15px;		
+	border:2px solid #EEEEEE;
+	padding: 20px;
+	border-radius: 100% ;
+	color: rgb(92, 173, 211);
+	position: relative;	
+	margin-top: 5%;
+}
+
+.floatleft:after
+{
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border:6px solid rgb(92, 173, 211);
+	border-radius: 100%;
+	top:42%;
+	right: -7%;
+}
+
+.floatleft:hover {background-color: grey;}
+
+.margeport { padding-left: 15%;}
+
+
+/*-------------------------------------Section 2 ------------------------------------------------------*/
+
+#principal2
+{
+	padding-bottom: 50px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #F5F5F5;	
+}
+
+/************************Header de la section 2***************************/
+
+#pricipal2head{	width: 100%;}
+
+/***************** menu header section1*****************/
+
+input#allwork ~ #imgfolio1 {visibility:hidden;}
+
+form.menusec
+{position:relative; padding:2%;} /*pour positionner before en rapport*/
+
+nav#menusec
+{
+	position: relative;	
+	margin:auto;
+	justify-content: space-around;
+	padding:20px;
+}
+
+[type="radio"]:checked, [type="radio"]:not(:checked){position: absolute;left:-9999px;} /*virer les bouttons*/
+
+[type="radio"]:checked + .bouttons 
+{
+	
+	background-color: #5CADD3;
+	box-shadow: 0px 2px 0px #488DAE;
+	color: white;
+	font-weight: bold;
+	transition: 0.3s;
+}
+[type="radio"]:not(:checked) + .bouttons
+{
+	
+	box-shadow: 2px 2px 0px #E5E5E5;
+	position: relative;
+	transition: 0.3s;
+}
+[type="radio"]:not(:checked) + .bouttons:hover
+{
+	
+	background-color: #5CADD3;	
+	color: white;	
+	transition: 0.3s;	
+	/*font-weight: bold;*/
+	border-right: 0;
+	border-left:0;			
+}
+[type="radio"]:not(:checked) + .bouttons:hover, [type="radio"]:checked + .bouttons:hover
+{
+	cursor: pointer;	
+}
+
+
+[type="radio"]:checked + .bouttons:before
+{
+	content: "";
+	position: absolute;
+	top:74%;
+	left:40.5%;
+	width: 0;
+	height: 0;
+	border-top: 10px solid #488DAE;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid transparent;
+	transition: 0.3s;
+}
+
+[type="radio"]:checked + .crea:before{left:47%;}
+[type="radio"]:checked + .corpo:before{left:52.5%;}
+[type="radio"]:checked + .port:before{left:58%;}
+
+
+.allwork
+{
+	border-radius: 2px 0px 0px 2px;
+}
+.port
+{
+	border-radius: 0px 2px 2px 0px;
+}
+
+.bouttons
+{	
+	width: 100px;
+	padding:10px;
+	margin:auto;
+	background-color: #E5E5E5;
+}
+
+/************************Article 1 de la section 2***************************/
+
+#principal2art
+{	
+	width: 90%;
+	margin-top:80px;
+	position: relative;	
+	margin:auto;
+	margin-left:5%;
+}
+
+/*************image portfolio*******************/
+
+.figure {padding:0;margin:0; }
+
+.imgport 
+{
+	display: block;
+	width:22%; 
+	height:22%;	
+}
+
+.contenerfolio
+{
+	display: inline-block;
+	position: relative;
+	height: auto;
+	width: 22%;	
+	margin-right: 30px;
+	margin-top: 40px;
+	padding: 0;	
+}
+
+.fa-eye
+{
+	color:white;
+}
+
+.imgfolio
+{
+	z-index: 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin:0;
+	padding: 0;	
+}
+
+.conteneri 
+{
+	position: absolute;
+	z-index: 5;
+	top:50%;
+	right: 3%;
+	padding: 5%;
+	border-radius: 100%;
+	border:2px solid white;
+	background-color: #4693B1;	
+	opacity: 0;
+	transition:1s;	
+}
+
+.backgreyfolio
+{
+	z-index: 3;
+	background-color: black;
+	opacity: 0;
+	position: absolute;
+	top: 60%;
+	width: 100%;
+	height: 38%;
+	transition:1s;		
+}
+
+.contenerh
+{
+	padding: 0;
+	margin:0;
+	position: absolute;
+	z-index: 5;
+	top: 60%;
+	left: 2%;
+	color:white;
+	font-weight: bold;
+	font-size: 1.5em;
+	opacity: 0;
+	transition:1s;
+}
+
+.contenerp
+{
+	padding: 0;
+	margin:0;
+	position: absolute;
+	z-index: 6;
+	top: 80%;
+	left: 2%;
+	color:white;
+	opacity: 0;
+	transition:1s;		
+}
+
+.contenerfolio:hover .contenerp {opacity: 1; transition: 4s;}
+.contenerfolio:hover h3 {opacity: 1; transition: 2s;}
+.contenerfolio:hover .backgreyfolio {opacity: 0.4;transition: 0.8s;}
+.contenerfolio:hover .conteneri {opacity: 1; transition: 1.6s; }
+
+/*-------------------------------------Section 3 ------------------------------------------------------*/
+
+#principal3
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	background-color: rgb(92, 173, 211);	
+}
+
+/************************Iframe de section 3*******************************/
+
+#googlemap
+{	
+	max-width: 1600px;
+	border:0;
+	width: 100%;
+	height: 700px;
+	opacity: 0.6;		
+}
+
+/*******************FORMULAIRE CONTACT section 3***************************/
+
+
+#formulaire
+{
+	position: absolute;
+	z-index: 2;
+	margin-top:75px;
+	padding:0;	
+	font-weight: bold;
+}
+
+#blocform
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 400px;
+	height: 590px;
+	margin-right: 100px;
+	background-color: #F0F4F5;
+	opacity: 0.7;
+	transition: 0.3s;
+}
+#blocform:hover
+{
+	opacity: 1;
+	transition: 0.3s;
+}
+
+textarea
+{
+	width: 360px;
+	height : 175px;
+	padding-top:10px;
+
+}
+
+input
+{
+	width: 360px;
+	height: 30px;
+}
+
+p.alignleft {font-size: 0.8em;}
+
+.alignleft
+{
+	width: 100%;
+	margin-left: 20px;
+	align-self: flex-start;
+	margin-bottom: 5px;		
+}
+.gras{font-weight: 900;}
+.zoneform{padding-left:10px;}
+
+
+/*-----------------------------EFFETS ET MISE EN FORME CSS-------------------------------------------*/
+
+
+/*---------------------------------------Les Liens---------------------------------*/
+
+a, .menu {	text-decoration: none;}
+
+.menu, .menu:visited
+{
+	color:black;
+}
+
+a{color:black;}
+
+.navlist
+{
+	height: 100%;
+	padding: 20px;
+	padding-top:45px;
+	margin:0px;
+	text-decoration: none;
+	color:black;
+	transition: 0.2s;
+}
+.navlist:hover
+{
+	padding-top: 45px;	
+	border-top: 5px solid rgb(92, 173, 211);
+
+}
+.navlist:active
+{
+	padding-top: 40px;
+	border-top: 5px solid rgb(92, 173, 211);
+	border-radius: 0px 0px 2px 2px;
+	box-shadow: -5px 5px 5px rgb(118,198,236) ;
+	background-color: rgb(92, 173, 211);
+	transition: 0.3s ease 0s;
+	transition: 0.2s;	
+}
+
+.liens
+{
+	text-decoration: none;
+	color:black;
+}
+
+.liens:visited{	color:black;}
+
+#plusinfo
+{
+	font-size: 1.2em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 15px;
+	margin-top:15px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 3px 0px rgb(68, 148, 187);
+	transition: 1s;
+}
+#plusinfo:hover
+{
+	font-size: 1.5em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 15px;
+	margin-top:15px;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -8px 8px 10px rgb(68, 148, 187);
+	transition: 1s;
+}
+#plusinfo:active
+{
+	font-size: 1.5em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 15px;
+	margin-top:15px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: -10px 10px 5px rgb(68, 148, 187) inset;
+	transition: 1s;
+}
+
+.sendform
+{
+	border:0;
+	max-width: 110px;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 5px;	
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 3px 0px rgb(68, 148, 187);
+	opacity: 1;
+	transition: 0.5s;
+	margin-bottom: 25px;
+
+}
+.sendform:hover
+{
+	max-width: 180px;
+	font-size: 1.2em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 8px;
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: -10px 10px 7px rgb(68, 148, 187);
+	font-size: 1.5em;
+	/*text-shadow: -8px 8px 0 grey;*/
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	padding-top:0;
+}
+.sendform:active
+{
+	font-size: 1.1em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 8px;
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: -8px 8px 5px rgb(68, 148, 187) inset;
+	text-shadow: none;
+}
+
+/*--------------------Mise en forme du Texte----------------------*/
+
+h1, h2
+{
+	font-size: 3em;
+	font-weight: bold;
+	transition:1s;	
+	width: 100%;
+}
+h2{font-weight: bold;
+}
+
+h1:hover,h2:hover
+{
+	text-shadow: -50px 50px 5px grey;
+	padding-bottom: 50px;
+	transition: 1s;
+}
+h4
+{
+	font-weight: bold;
+	font-size: 1.7em;
+}
+
+.strong {font-size: 1.2em; font-weight: bolder;}
+.adress{font-size: 1em;color: #262728;}
+#webagency{	color:rgb(92, 173, 211);}
+#webagence{	width: 650px; font-size: 2.2em;}	
+#onslider{ color:white; }
+#pricipal2head{	text-align: center;}
+.contenerp {font-weight: bold;}
+.titreport{font-weight: bolder;font-size: 1.4em; margin-bottom: 0;}
+
+ul 
+{
+	list-style:none; /*****virer les puces des nav******/
+	margin-left:0;
+	padding-left:0;
+}
+
+li {margin-right: 15px;}/* à adapter */
+
+.titre{	text-align: center;}
+
+.plusinfos
+{
+	margin-top:50px;
+	font-weight: bold;
+	transition: 0.5s;
+}
+
+.boutonleft, .boutonright
+{
+	font-size:3em;	
+	color: white;	
+}
+
+/*------------------Ligne et rond sous les titres---------------------------*/
+
+.fa-circle{	color:rgb(92, 173, 211);}
+
+.underline
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	height: 50px;	
+}
+
+#space3,#space2,#space1,#space4
+{	
+	width: 5%;
+	height: 0;
+	border: 1px  solid #EFEFEF;
+	text-decoration-color: #EFEFEF;
+}
+
+/*--------------------------------------SCROOLBAR webkit ---------------------------------*/
+/*-----------uniquement google chrome-------------*/
+
+::-webkit-scrollbar-track
+{
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: rgb(68, 148, 187);
+	border: 2px solid  rgb(68, 148, 187);
+}
+

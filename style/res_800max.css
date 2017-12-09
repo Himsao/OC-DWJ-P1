@@ -1,0 +1,124 @@
+@media screen,handheld and (max-width: 799px)
+{
+
+/*-----------------------------------------body---------------------------------------------------------*/
+	
+	*{transition: 1s}
+
+
+/*-----------------------------------------div .content-------------------------------------------------*/
+
+	.content{max-width: 400px;}
+
+/*---------------------------------------header----------------------------------------------------------*/
+	
+	#slider{display: none;}
+	#onslider{display: none;}
+	#sliderremplacement{display: inline;}
+	#contener_slider{
+		background-image: url('../img/cta2/cta2-bg.jpg');
+		background-size:cover;
+		max-width: 100%;
+		margin:0;
+		padding: 0;
+		overflow: hidden;
+		opacity: 0.7;			 
+	}
+	.accueil{display: none;}
+	#menuprinc
+	{
+		padding-bottom: 100px;
+	}
+
+/*-------------------------------------Section 1 ------------------------------------*/
+	.ux,.ui,.seo
+	{
+		display: flex; 
+		flex-direction: row;
+		align-items: flex-start; 
+		justify-content: 
+		space-around;
+		text-align: center;		
+	}
+#minires1,#minires2{display:inline;}
+#maxires1,#maxires2{display: none; visibility: hidden;}
+.margeport { padding: initial;}
+.floatleft{float:right;} 
+.descport{display:none;}
+/*-------------------------------------Section 2 ------------------------------------*/
+/*-------------recalibrer bouttons-----------*/
+	.menusec{display:flex;flex-direction: column; justify-content: space-around; }
+	[type="radio"]:checked{margin-top:10px;}.bouttons, [type="radio"]:not(checked).bouttons 
+	{
+		margin-top:10px;
+	}
+
+	[type="radio"]:checked + .bouttons:before { display: none; }
+	[type="radio"]:checked + .crea:before{display:none;}
+	[type="radio"]:checked + .corpo:before{display:none;}
+	[type="radio"]:checked + .port:before{display:none;}
+
+	#principal2art{margin-top:50px;}
+
+.bouttons
+{	
+	width: 100px;
+	padding:10px;
+	margin:auto;
+	background-color: #E5E5E5;
+}
+.contenerp{display: none;}
+.contenerh{font-size: 0.8em;}	
+	/*----------------------*/
+/*-------------------------------------Section 3 ------------------------------------*/
+/*********FORMULAIRE************/
+#contener_form{max-width: 100%; }
+input, textarea{max-width: 95%;}
+.sendform
+{
+	border:0;
+	max-width: 90%;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 5px;	
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 3px 0px rgb(68, 148, 187);
+	opacity: 1;
+	transition: 0.5s;
+	margin-bottom: 25px;
+	margin:5%;
+
+}
+.sendform:hover
+{
+	border:0;
+	max-width: 90%;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 5px;	
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 3px 0px rgb(68, 148, 187);
+	opacity: 1;
+	transition: 0.5s;
+	margin-bottom: 25px;
+}
+.sendform:active
+{
+	border:0;
+	max-width: 90%;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 5px;	
+	border-radius: 2px 2px 2px 2px;
+	box-shadow: 0 3px 0px rgb(68, 148, 187);
+	opacity: 1;
+	transition: 0.5s;
+	margin-bottom: 25px;
+}
+/*-----------------------------------------div .content-----------------------------------*/
+/*-----------------------------EFFETS ET MISE EN FORME CSS-------------------------------------------*/
+
+}

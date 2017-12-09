@@ -1,0 +1,123 @@
+@media screen and (max-width: 1599px)
+{
+/*-----------------------------------------body------------------------------------------------*/
+	
+	*{transition: 1s}
+
+/*-----------------------------------------div .content-------------------------------------------------*/
+
+	.content{max-width: 1280px;}
+
+/*---------------------------------------header----------------------------------------------------------*/
+
+	div#slider:before,div#slider:after{display: none;}
+
+	#onslider
+	{		
+		margin-left: 7%;
+		margin-top:10%;
+	}
+	#webadescription{width: 150%;}
+	#webagence
+	{
+		text-shadow: 0px 0px 0px grey;
+		padding-bottom: 0;		
+		margin-top:0;
+		padding:0;		
+	}
+	#plusinfo
+{
+	font-size: 1em ;	
+	padding: 10px;
+	margin-top:10px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 3px 0px rgb(68, 148, 187);
+	transition: 1s;
+}
+#plusinfo:hover
+{
+	font-size: 1.5em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 15px;
+	margin-top:15px;
+	border-radius: 8px 8px 8px 8px;
+	box-shadow: -8px 8px 10px rgb(68, 148, 187);
+	transition: 1s;
+}
+#plusinfo:active
+{
+	font-size: 1.5em ;
+	color: white;
+	text-decoration: none;
+	background-color: rgb(92, 173, 211);
+	padding: 15px;
+	margin-top:15px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: -10px 10px 5px rgb(68, 148, 187) inset;
+	transition: 1s;
+}
+/*-------------------------------------Section 1 ------------------------------------*/
+
+	#paraserv
+	{
+		padding-right:200px;
+		padding-left:200px;
+		margin-bottom: 100px;		
+	}
+
+	.photomac{display: none;}
+
+	.uxdesign{width: 80%;}
+
+	.floatleft  /*les images UXdesign UIdesign et SEO*/
+	{
+		float: left;
+		margin-top:2%;	
+			
+	}
+
+	.ui, .ux, .seo 	{padding-bottom: 0px;}
+	#minires1,#minires2{display:none;}
+	#maxires1,#maxires2{display: inline;}
+	
+
+/*-------------------------------------Section 2 ------------------------------------*/
+
+	.contenerp{font-size: 0.8em;}
+
+/*-------------recalibrer bouttons-----------*/
+	[type="radio"]:checked + .bouttons:before { top:79%; left:38.5%; }
+	[type="radio"]:checked + .crea:before{left:46%;}
+	[type="radio"]:checked + .corpo:before{left:53%;}
+	[type="radio"]:checked + .port:before{left:60%;}
+/*----------------------*/
+/*-------------------------------------Section 3 ------------------------------------*/
+/*-----------------------------EFFETS ET MISE EN FORME CSS-------------------------------------------*/
+
+	p, h3 {font-size: 1.5em;}
+		
+	.underline{width: 100%;}
+		
+	div#space2,div#space1,div#space3,div#space4
+	{	
+		width: 17.5%;
+		height: 0;
+		border: 2px  solid #EEEEEE;
+	}
+
+	.titreport
+	{
+			font-weight: bolder;
+			font-size: 1.4em;
+			margin-bottom: 0;
+	}
+
+	.margeport
+	{ 
+		padding-left: 15%;		
+		margin-bottom: 0px;
+	}
+
+}
