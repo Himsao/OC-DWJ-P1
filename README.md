@@ -1,2 +1,3 @@
-Le fichier README ici ne sert pas à grand chose puisque je suis seul sur ce projet ! 
-Si, il est très utile car on peut voir ce qu'il s'est passé !
+Cursus Developpeur Web Junior OpenClassRoom, Intégrez la maquette d'une agence Web V1.0
+
+Pas de git jusque là donc pas de commit avant la première version !
