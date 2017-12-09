@@ -1,1 +1,1 @@
-Projet développeur Web Junior OpenClassRoom, intégrez la maquette d'une agence Web.
+Le fichier README ici ne sert pas à grand chose puisque je suis seul sur ce projet ! 
